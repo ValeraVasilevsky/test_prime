@@ -1,0 +1,7 @@
+.container {
+  @apply w-[20rem];
+}
+
+.clear {
+  @apply flex justify-start items-center p-3 cursor-pointer;
+}
