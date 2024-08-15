@@ -22,12 +22,10 @@
 import { computed, ref } from "vue";
 import MultiSelect from "primevue/multiselect";
 
+import type { MultiSelectModelValue } from "./model";
+
 import styles from "./styles.module.scss";
 
-interface MultiSelectModelValue {
-  name: string;
-  code: string;
-}
 type MultiSelectEmits = {
   "update:model-value": [value: MultiSelectModelValue[]];
 };
@@ -52,6 +50,6 @@ const onChange = (): void => {
 
 const onClear = (): void => {
   modelValue.value = [];
-  emits("update:model-value", modelValue.value);
+  onChange();
 };
 </script>

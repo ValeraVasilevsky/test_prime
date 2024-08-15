@@ -13,10 +13,9 @@
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { VDateTimePicker } from "components/date-time-picker";
-import { VSelect } from "components/select";
+import { VDateTimePicker, VSelect } from "shared/ui";
 
-import { prepareTime } from "utils/time";
+import { prepareTime } from "shared/utils/time";
 
 import styles from "./styles.module.scss";
 
