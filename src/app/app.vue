@@ -6,34 +6,45 @@
     </div>
 
     <div :class="styles.field">
-      <VSelect v-model="selectedCountries" :options="countries" />
+      <VSelect v-model="selectedCountries" :options="COUNTRIES" />
+    </div>
+
+    <div :class="styles.field">
+      <VDataTable :value="dataTableValue" :header="tableHeader" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { VDateTimePicker, VSelect } from "shared/ui";
+import {
+  VDateTimePicker,
+  VSelect,
+  VDataTable,
+  type VDataTableHeader,
+} from "shared/ui";
+import { COUNTRIES } from "shared/constants";
 
 import { prepareTime } from "shared/utils/time";
+import { prepareApiString } from "shared/utils/string";
 
 import styles from "./styles.module.scss";
 
 const time = ref<Date | null>(null);
 const selectedCountries = ref<{ name: string; code: string }[]>([]);
-const countries = ref<{ name: string; code: string }[]>([
-  { name: "Australia", code: "AU" },
-  { name: "Brazil", code: "BR" },
-  { name: "China", code: "CN" },
-  { name: "Egypt", code: "EG" },
-  { name: "France", code: "FR" },
-  { name: "Germany", code: "DE" },
-  { name: "India", code: "IN" },
-  { name: "Japan", code: "JP" },
-  { name: "Spain", code: "ES" },
-  { name: "United States", code: "US" },
+
+const tableHeader = ref<VDataTableHeader[]>([
+  {
+    field: "time",
+    header: "Время",
+  },
+  {
+    field: "value",
+    header: "Значение",
+  },
 ]);
 
+const dataTableValue = prepareApiString();
 const preparedTime = computed((): string => {
   return !!time.value ? prepareTime(time.value) : "";
 });
