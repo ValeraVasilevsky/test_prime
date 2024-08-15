@@ -1,0 +1,7 @@
+.header {
+  @apply fixed top-0 left-0 right-0 px-4 py-3 flex justify-center items-center gap-4;
+
+  & .link {
+    @apply text-white font-semibold cursor-pointer;
+  }
+}
