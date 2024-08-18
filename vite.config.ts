@@ -21,7 +21,4 @@ export default defineConfig({
   },
 
   base: "/test_prime/",
-  build: {
-    sourcemap: true,
-  },
 });
