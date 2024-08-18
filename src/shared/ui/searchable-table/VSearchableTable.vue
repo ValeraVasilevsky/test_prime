@@ -93,7 +93,10 @@ const listButton = ref<HTMLElement | null>();
 const filteredColumns = ref<VDataTableItem[]>(props.value || []);
 
 const showHeader = computed((): boolean => props.filtered || props.withSelect);
-const tableColumns = computed((): MultiSelectModelValue[] => selectValue.value);
+const tableColumns = computed((): MultiSelectModelValue[] => {
+  if (!selectValue.value.length) return props.selectValue;
+  return selectValue.value;
+});
 
 const toggleList = (): void => {
   showList.value = !showList.value;
