@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import { URL, fileURLToPath } from 'url';
+import { URL, fileURLToPath } from "url";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,4 +21,7 @@ export default defineConfig({
   },
 
   base: "/test_prime/",
+  build: {
+    sourcemap: true,
+  },
 });
