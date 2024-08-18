@@ -20,5 +20,5 @@ export default defineConfig({
     port: 8080,
   },
 
-  base: "test_prime",
+  base: "/test_prime/",
 });
