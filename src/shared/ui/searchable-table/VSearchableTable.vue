@@ -94,7 +94,7 @@ const filteredColumns = ref<VDataTableItem[]>(props.value || []);
 
 const showHeader = computed((): boolean => props.filtered || props.withSelect);
 const tableColumns = computed((): MultiSelectModelValue[] => {
-  if (!selectValue.value.length) return props.selectValue;
+  if (!selectValue.value.length) return props.selectOptions;
   return selectValue.value;
 });
 
