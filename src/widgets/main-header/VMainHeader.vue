@@ -32,6 +32,10 @@ const links: { title: string; to: PAGES_NAMES }[] = [
     title: "DataTable",
     to: PAGES_NAMES.DataTable,
   },
+  {
+    title: "SearchableTable",
+    to: PAGES_NAMES.SearchableTable,
+  },
 ];
 
 const navigateTo = (to: PAGES_NAMES): void => {
