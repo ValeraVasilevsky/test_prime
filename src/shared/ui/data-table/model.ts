@@ -3,4 +3,4 @@ export interface VDataTableHeader {
   header: string;
 }
 
-export type VDataTableItem = Record<VDataTableHeader["field"], string>;
+export type VDataTableItem = Record<VDataTableHeader["field"], string | number>;

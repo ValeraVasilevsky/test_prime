@@ -1,4 +1,5 @@
 import type { MultiSelectModelValue } from "./ui/select";
+import type { VDataTableHeader } from "./ui/data-table";
 
 export const COUNTRIES: MultiSelectModelValue[] = [
   { name: "Australia", code: "AU" },
@@ -20,4 +21,28 @@ export enum PAGES_NAMES {
   DatePicker = "date-picker",
   Select = "select",
   DataTable = "data-table",
+  SearchableTable = "searchable-table",
 }
+
+export const USERS_HEADER: VDataTableHeader[] = [
+  {
+    field: "id",
+    header: "ID",
+  },
+  {
+    field: "name",
+    header: "Name",
+  },
+  {
+    field: "email",
+    header: "Email",
+  },
+  {
+    field: "phone",
+    header: "Phone",
+  },
+  {
+    field: "website",
+    header: "Website",
+  },
+];

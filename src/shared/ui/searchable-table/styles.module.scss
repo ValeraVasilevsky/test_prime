@@ -1,0 +1,23 @@
+.container {
+  @apply w-full h-full block;
+
+  & .table {
+    @apply w-full;
+  }
+
+  & .header {
+    @apply flex justify-start items-center gap-2;
+  }
+
+  & .input {
+    @apply w-4/5;
+  }
+
+  & .list {
+    @apply absolute top-full;
+  }
+
+  & .select {
+    @apply w-1/5;
+  }
+}

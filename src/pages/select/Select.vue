@@ -1,6 +1,6 @@
 <template>
   <div>
-    <VSelect v-model="selectedCountries" :options="COUNTRIES" />
+    <VSelect v-model="selectedCountries" v-bind="$attrs" :options="COUNTRIES" />
   </div>
 </template>
 

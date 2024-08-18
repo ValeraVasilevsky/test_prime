@@ -30,6 +30,12 @@ export const router = createRouter({
           name: PAGES_NAMES.DataTable,
           component: (): Component => import("pages/data-table/DataTable.vue"),
         },
+        {
+          path: "searchable-table",
+          name: PAGES_NAMES.SearchableTable,
+          component: (): Component =>
+            import("pages/searchable-table/SearchableTable.vue"),
+        },
       ],
     },
   ] as RouteRecordRaw[],

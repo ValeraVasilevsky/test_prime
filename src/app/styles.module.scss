@@ -2,6 +2,6 @@
   @apply relative w-full h-[100vh] flex justify-start items-center flex-col px-6 py-12;
 
   & .content {
-    @apply w-full h-full flex items-center justify-center overflow-auto;
+    @apply w-full h-full flex items-center justify-start overflow-auto;
   }
 }
