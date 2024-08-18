@@ -3,7 +3,11 @@
     <div v-if="$slots['menu']" :class="styles.menu">
       <slot name="menu" />
     </div>
-    <InputText v-model="modelValue" @update:model-value="onInput" />
+    <InputText
+      v-model="modelValue"
+      @update:model-value="onInput"
+      @keypress.enter="onSearch"
+    />
     <Button
       v-if="showClearIcon"
       icon="pi pi-times"
